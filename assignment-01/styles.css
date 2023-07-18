@@ -1,0 +1,32 @@
+/* write css code in here*/ 
+/* .div .header{
+    width: 100% !important;
+} */
+
+.header {
+    height:200px;
+    margin:0 auto;
+    background:#21628c;
+    font-family:arial;
+    text-transform:uppercase;
+    align-items:baseline!important;
+    
+}
+
+h1{
+    color:white;
+    font-size:65px;
+    text-align:center;
+    display:inline-block;
+    position:relative;
+
+}
+h1 span{
+    border:10px solid white;
+    padding: .2em .5em; 
+}
+
+p.descripton{
+    text-align:center;
+    color:white;
+}
