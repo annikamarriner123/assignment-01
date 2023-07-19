@@ -3,7 +3,7 @@
     width: 100% !important;
 } */
 
-.header {
+.main_header {
     height:175px;
     margin: 0 auto;
     background:#4679e9;
@@ -15,8 +15,9 @@
 h1{
     color:white;
     font-size:55px;
+    padding-top:0.5%;
     text-align:center;
-    display:inline-block;
+    display:inline-block; 
     position:relative;
 
 }
@@ -24,5 +25,9 @@ h1{
 h1 span{
     border:10px solid white;
     padding: .2em .5em; 
+}
+
+body {
+    margin: 0;
 }
 
