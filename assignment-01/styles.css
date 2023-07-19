@@ -89,6 +89,25 @@ h1{
 
 .side-bar .menu .item a:hover{
     background: #154844;
-    transistion: 0.3s ease;
+    transition: 0.3s ease;
 
+}
+
+.side-bar .menu .item i{
+    margin-right: 15px;
+}
+
+.side-bar .menu .item a .dropdown{
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+}
+
+.side-bar .menu .item .sub-menu{
+    background:rgb(255, 255, 255, 0.1);
+}
+
+.side-bar .menu .item .sub-menu a{
+    padding-left:80px;  
 }
