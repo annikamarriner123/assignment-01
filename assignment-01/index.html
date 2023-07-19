@@ -23,12 +23,36 @@
          </div>
 
          <body>
-            <div class="btn-group">
+            <!-- <div class="btn-group">
                 <button>Filter</button>
                 <button>Samsung</button>
                 <button>Sony</button>
               </div>
+</div> -->
+
+<style>
+    #menu {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+    }
+    .menu-item {
+        cursor: pointer;
+    }
+    #results {
+        margin-left: 220px;
+    }
+</style>
+</head>
+<body>
+<div id="menu">
+    <div class="menu-item" onclick="filterItems('all')">All</div>
+    <div class="menu-item" onclick="filterItems('category1')">Category 1</div>
+    <div class="menu-item" onclick="filterItems('category2')">Category 2</div>
+    <div class="menu-item" onclick="filterItems('category3')">Category 3</div>
 </div>
+<div id="results"></div>
+
      
 </head>
 
