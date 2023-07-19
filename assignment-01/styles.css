@@ -1,33 +1,55 @@
-/* write css code in here*/ 
-/* .div .header{
-    width: 100% !important;
-} */
+
+*{
+    background-color: #fffef8;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+.material-symbols-outlined {
+        font-family: 'Material Symbols Outlined';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 5vh !important; 
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+    }
+
 
 .main_header {
-    height:175px;
-    margin: 0 auto;
-    background:#4679e9;
-    font-family:arial;
-    text-transform:uppercase;
-    
+    height:100px;
+    text-transform:uppercase;   
+    font-family: 'Poppins', sans-serif;   
 }
 
 h1{
-    color:white;
+    color:#154844;
     font-size:55px;
-    padding-top:0.5%;
+    padding-top:3.25%;
+    margin:0;
     text-align:center;
-    display:inline-block; 
     position:relative;
-
-}
-
-h1 span{
-    border:10px solid white;
-    padding: .2em .5em; 
+    font-size:5vh;
 }
 
 body {
     margin: 0;
+}
+
+.div {
+    margin:0;
 }
 
