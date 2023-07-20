@@ -6,42 +6,171 @@
     font-family: "Poppins", sans-serif;
 }
 
-body{
-    min-height:100vh;
-    background: url(bg.jpg)no-repeat;
-    background-size:cover;
-    background-position: center;
-}
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-}
-
-
-.material-symbols-outlined {
-        font-size: 5vh !important; 
-    }
-
-
+/* 
 .main_header {
     height:100px;
     text-transform:uppercase;   
     font-family: 'Poppins', sans-serif;  
+} */
+
+.main_header h1{
+    color:#000000;
+    font-size:55px;
+    margin:5vh 10vw 5vh 55vw;
+    position:absolute;
+    font-size:8vh;
+    font-family:"Poppins", sans-serif;
 }
 
-h1{
-    color:#fffef8;
-    font-size:55px;
-    padding:3.25%;
-    margin:0;
-    text-align:center;
-    position:relative;
-    font-size:5vh;
-}
 .div {
     margin:0;
 }
+
+div.background {
+    background: url(forest-background.jpeg) no-repeat;
+    border: 2px solid darkgreen;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+  }
+  
+ div.wrapper {
+    background-color: rgb(3, 66, 3);
+    border: 1px solid black;
+    opacity: 0.2;
+    height: 100%;
+    margin:0;
+    width:25vw;
+    padding-top:15vh;
+    box-shadow:darkgreen;
+  }
+  
+
+  input[type=text] {
+    background-color: #fff;
+    color:#000000;
+    margin:5vh 5vw 0 3vw;
+    width:17vw;
+    height:6vh;
+    opacity: 1 !important;
+    font-family: "Poppins", sans-serif;
+  }
+
+  input[type=text] .placeholder{
+    color: black;
+    opacity: fill;
+    margin:5vw;
+  }
+
+   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #000000;
+    opacity: 1; /* Firefox */
+    font-family:"Poppins", sans-serif;
+    font-size:2.5vh;
+    margin-left:2v
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #000000;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #000000;
+  } */
+
+
+.status{
+    margin:5vh;
+}
+
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element: */
+  }
+  
+  .select-selected {
+    background-color: white;
+    opacity:1.0 !important;
+    margin:5vh 5vw 5vh 3vw;
+    width:17vw;
+  }
+
+
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+    position:absolute;
+    content: "";
+    top: 14px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: black transparent transparent transparent;
+    margin:5px 5px 5px 8vw;
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent black transparent;
+    top: 7px;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+    color: #000000;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+  
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    margin-left:5vw;
+    width:17vw;
+    
+  }
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+
+
+
+
+  
+
+
+  /*sort by drop down menu
+  /* The container must be positioned relative: */
+.sort-by {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .sort-by select {
+    display: none; /*hide original SELECT element: */
+  }
+
+  .select{
+    margin:0;
+  }
