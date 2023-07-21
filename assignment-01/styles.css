@@ -76,7 +76,7 @@ header h1{
 }
 
 aside {
-    background-color: rgb(3, 66, 3);
+    /* background-color: rgb(3, 66, 3); */
     border: 1px solid black;
     /* height: 100%; */
     /* margin:0; */
@@ -235,4 +235,66 @@ input[type=text] .placeholder{
 .select{
     margin:0;
 }
+
+/* Style article as a card */
+article {
+    background-color: white;
+    border: 1px solid black;
+    width: 20vw;
+    margin: 5vh 5vw 5vh 5vw;
+    padding: 1em;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+/* Style main#birds-container as a responsive grid */
+main#birds-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+    grid-gap: 1em;
+    padding: 1em;
+    margin: 0;
+}
+
+/* Style header to sit on top, aside to the left, main to the right */
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "header header" "aside main";
+    grid-gap: 1em;
+    padding: 1em;
+    margin: 0;
+}
+
+header {
+    grid-area: header;
+}
+
+aside {
+    grid-area: aside;
+}
+
+main {
+    grid-area: main;
+}
+
+/*seperate the header and the main*/
+header{
+    margin-bottom: 5vh;
+}
+
+/*style aside to light green opacity on left side of screen*/
+aside{
+    background-color: rgba(3, 66, 3, 0.5);
+    height: 100%;
+    margin:-10;
+    width:15vw;
+    padding-top:15vh;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+    position:relative;
+    overflow: hidden;
+}
+
+
 
