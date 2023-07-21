@@ -1,19 +1,72 @@
+/* CSS RESET */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
 
-*{
-    margin:0;
-    padding:0;
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+}
+/*
+2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+/*
+Typographic tweaks!
+3. Add accessible line-height
+4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+/*
+5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+/*
+7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+/*
+8. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
 }
 
-/* 
-.main_header {
-    height:100px;
-    text-transform:uppercase;   
-    font-family: 'Poppins', sans-serif;  
-} */
+/* CSS RESET END */
 
-.main_header h1{
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: url(forest-background.jpeg) no-repeat;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+header {
+    width: 100%;
+}
+
+header h1{
     color:#000000;
     font-size:55px;
     margin:5vh 10vw 5vh 35vw;
@@ -22,42 +75,19 @@
     font-family:"Poppins", sans-serif;
 }
 
-.div {
-    margin:0;
-}
-
-.nav_bar{
-    height:100%;
-}
-div.background {
-    background: url(forest-background.jpeg) no-repeat;
-    height:100vh;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-
-  }
-  
-.wrapper {
+aside {
     background-color: rgb(3, 66, 3);
     border: 1px solid black;
-    height: 100%;
-    margin:0;
-    width:15vw;
-    padding-top:15vh;
+    /* height: 100%; */
+    /* margin:0; */
+    /* width:15vw; */
+    /* padding-top:15vh; */
     box-shadow:green;
-    opacity:0.2;
-    position:relative;
-    overflow: hidden;
-  }
-  
-  .overlay {
-    z-index: 9;
-    margin: 30px;
-    background: black;
-  }
+    /* position:relative; */
+    /* overflow: hidden; */
+}
 
-  input[type=text] {
+input[type=text] {
     background-color: white;
     color:black;
     margin:5vh 5vw 0 0vw;
@@ -70,27 +100,27 @@ div.background {
     left: 0;
     opacity: 0.7;
     border:2px white;
-  }
+}
 
-  input[type=text] .placeholder{
+input[type=text] .placeholder{
     color: white;
-  }
+}
 
-   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #000000;
     opacity: 1; /* Firefox */
     font-family:"Poppins", sans-serif;
     font-size:2.5vh;
     margin-left:2vw;
-  }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: #000000;
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
     color: #000000;
-  } */
+} */
 
 
 .status{
@@ -104,13 +134,13 @@ div.background {
     top: 0;
     left: 0;
     opacity: 0.7;
-  }
-  
-  .custom-select select {
+}
+
+.custom-select select {
     display: none; /*hide original SELECT element: */
-  }
-  
-  .select-selected {
+}
+
+.select-selected {
     background-color: white;
     opacity:1.0 !important;
     margin:15vh 5vw 5vh 0vw;
@@ -120,14 +150,14 @@ div.background {
     top: 0;
     left: 0;
     opacity: 0.7;
-  }
+}
 
-  .select-selected:hover{
+.select-selected:hover{
     opacity:0.2;
-  }
+}
 
-  /* Style the arrow inside the select element: */
-  .select-selected:after {
+/* Style the arrow inside the select element: */
+.select-selected:after {
     position:absolute;
     content: "";
     top: 14px;
@@ -137,25 +167,25 @@ div.background {
     border: 6px solid transparent;
     border-color: black transparent transparent transparent;
     margin:5px 5px 5px 8vw;
-  }
-  
-  /* Point the arrow upwards when the select box is open (active): */
-  .select-selected.select-arrow-active:after {
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
     border-color: transparent transparent black transparent;
     top: 7px;
-  }
-  
-  /* style the items (options), including the selected item: */
-  .select-items div,.select-selected {
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
     color: #000000;
     padding: 8px 16px;
     border: 1px solid transparent;
     border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
     cursor: pointer;
-  }
-  
-  /* Style items (options): */
-  .select-items {
+}
+
+/* Style items (options): */
+.select-items {
     position: absolute;
     background-color: #fff;
     top: 100%;
@@ -168,26 +198,26 @@ div.background {
     top: 0;
     left: 0;
     opacity: 0.7;
-  }
-  
-  /* Hide the items when the select box is closed: */
-  .select-hide {
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
     display: none;
-  }
-  
-  .select-items div:hover, .same-as-selected {
+}
+
+.select-items div:hover, .same-as-selected {
     background-color: rgba(0, 0, 0, 0.1);
-  }
+}
 
 
 
 
 
-  
 
 
-  /*sort by drop down menu
-  /* The container must be positioned relative: */
+
+/*sort by drop down menu
+/* The container must be positioned relative: */
 .sort-by {
     position: relative;
     font-family: Arial;
@@ -196,13 +226,13 @@ div.background {
     left: 0;
     opacity: 0.7;
     margin-top:10vh;
-  }
-  
-  .sort-by select {
-    display: none; /*hide original SELECT element: */
-  }
+}
 
-  .select{
+.sort-by select {
+    display: none; /*hide original SELECT element: */
+}
+
+.select{
     margin:0;
-  }
+}
 
