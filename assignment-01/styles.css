@@ -296,5 +296,19 @@ aside{
     overflow: hidden;
 }
 
+/* Style the dl dd dt with bold and indents */
 
+dl {
+    margin: 0;
+    padding: 0;
+}
 
+dt {
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+dd {
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
