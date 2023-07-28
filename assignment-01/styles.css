@@ -329,7 +329,7 @@ dd {
     padding: 1em;
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
     position: relative;
-    height:auto;
+    height:110vh;
 }
 
 
@@ -339,4 +339,12 @@ dd {
     object-fit: cover;
     object-position: center;
 }
+
+
+/*style the p tag in the bird card*/
+#birds-container .bird-card p{
+    margin: 2vh 0 2vh 0;
+    padding: 0.25em;
+}
+
 
