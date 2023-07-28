@@ -69,29 +69,17 @@ header {
 header h1{
     color:#000000;
     font-size:55px;
-    margin:5vh 10vw 5vh 35vw;
+    margin:5vh 10vw 5vh 43vw;
     position:absolute;
     font-size:8vh;
     font-family:"Poppins", sans-serif;
 }
 
-aside {
-    /* background-color: rgb(3, 66, 3); */
-    border: 1px solid black;
-    /* height: 100%; */
-    /* margin:0; */
-    /* width:15vw; */
-    /* padding-top:15vh; */
-    box-shadow:green;
-    /* position:relative; */
-    /* overflow: hidden; */
-}
-
 input[type=text] {
     background-color: white;
     color:black;
-    margin:5vh 5vw 0 0vw;
-    width:15vw;
+    margin:5vh 5vw 0 1vw;
+    width:12vw;
     height:7vh;
     opacity: 1!important;
     font-family: "Poppins", sans-serif;
@@ -144,7 +132,7 @@ input[type=text] .placeholder{
     background-color: white;
     opacity:1.0 !important;
     margin:15vh 5vw 5vh 0vw;
-    width:15vw;
+    width:13vw;
     height:7vh;
     position: absolute;
     top: 0;
@@ -166,7 +154,7 @@ input[type=text] .placeholder{
     height: 0;
     border: 6px solid transparent;
     border-color: black transparent transparent transparent;
-    margin:5px 5px 5px 8vw;
+    margin:5px 5px 5px 5px;
 }
 
 /* Point the arrow upwards when the select box is open (active): */
@@ -191,13 +179,11 @@ input[type=text] .placeholder{
     top: 100%;
     left: 0;
     right: 0;
-    z-index: 99;
-    margin:15vh 0 0 15vw;
+    z-index: 1;
+    margin:15vh 0 0 13vw;
     width:15vw;
-    position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.7;
 }
 
 /* Hide the items when the select box is closed: */
@@ -216,12 +202,10 @@ input[type=text] .placeholder{
 
 
 
-/*sort by drop down menu
-/* The container must be positioned relative: */
+/*sort by drop down menu*/
 .sort-by {
-    position: relative;
-    font-family: Arial;
     position: absolute;
+    font-family: Arial;
     top: 0;
     left: 0;
     opacity: 0.7;
@@ -241,7 +225,7 @@ article {
     background-color: white;
     border: 1px solid black;
     width: 20vw;
-    margin: 5vh 5vw 5vh 5vw;
+    margin: 2vh 5vw 7vh 2vw;
     padding: 1em;
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
     position: relative;
@@ -271,10 +255,6 @@ header {
     grid-area: header;
 }
 
-aside {
-    grid-area: aside;
-}
-
 main {
     grid-area: main;
 }
@@ -287,13 +267,19 @@ header{
 /*style aside to light green opacity on left side of screen*/
 aside{
     background-color: rgba(3, 66, 3, 0.5);
-    height: 100%;
-    margin:-10;
-    width:15vw;
-    padding-top:15vh;
-    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
-    position:relative;
     overflow: hidden;
+    margin-top: -10vh;
+    margin-left: -2vw;
+    height: 100%;
+    width: 100%;
+    padding-top: 15vh;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+    position: relative;
+    grid-area: aside;
+}
+
+aside form{
+    position:fixed;
 }
 
 /* Style the dl dd dt with bold and indents */
@@ -312,3 +298,45 @@ dd {
     margin-left: 1em;
     margin-bottom: 1em;
 }
+
+/*style the birds-container to be more to the left*/
+ main#birds-container{
+    margin-right: 7vw;
+    margin-top:10vh;
+} 
+
+#birds-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+    grid-gap: 1em;
+    padding: 1em;
+    margin: 0;
+}
+
+#birds-container img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*style the bird card*/
+#birds-container .bird-card{
+    background-color: white;
+    border: 1px solid black;
+    width: 20vw;
+    margin: 2vh 5vw 7vh 2vw;
+    padding: 1em;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+    position: relative;
+    height:auto;
+}
+
+
+ #birds-container .bird-card img{
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    object-position: center;
+}
+
