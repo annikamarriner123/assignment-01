@@ -21,16 +21,16 @@
     </header>
     
     <aside>
-        <form id="filter">
-            <input id="search" type="text" placeholder="Search Birds">
-
-
-            <div class="custom-select">
+        <div id="sidebar">
+            <form id="filter">
+                <input id="search" type="text" placeholder="Search Birds">
+                
+                <label for="status-filter">Conservation Status:</label>
                 <select id="status-filter">
-                    <option value="0">Conservation Status :</option>
+                    <option value="0">-- Select Status --</option>
                     <option value="1">Not Threatened</option>
                     <option value="2">Naturally Uncommon</option>
-                    <option value="3">Relicit</option>
+                    <option value="3">Relict</option>
                     <option value="4">Recovering</option>
                     <option value="5">Declining</option>
                     <option value="6">Nationally Increasing</option>
@@ -39,27 +39,41 @@
                     <option value="9">Nationally Critical</option>
                     <option value="10">Data Deficient</option>
                 </select>
-            </div>
-            
-            <div class="sort-by">
+                
+                <label for="sort">Sort by:</label>
                 <select id="sort">
-                    <option value="0">Sort by</option>
-                    <option value="1">Lightest to heaviest</option>
-                    <option value="2">Heaviest to lightest</option>
+                    <option value="0">-- Select Sort Order --</option>
+                    <option value="1">Lightest to Heaviest</option>
+                    <option value="2">Heaviest to Lightest</option>
                     <option value="3">Smallest to Largest</option>
                     <option value="4">Largest to Smallest</option>
                 </select>
-            
+            </form>
+            <div class="results">
+                <span id="results-count">0</span> birds found
             </div>
-            
-            
-        </form>                 
-        
-    </aside>
+            <div id="status-list">
+                <h2>Conservation Status</h2>
+                <ul>
+                    <li> <span class="circle not-threatened"></span> Not Threatened</li>
+                    <li> <span class="circle naturally-uncommon"></span> Naturally Uncommon </li>
+                    <li> <span class="circle relict"></span> Relict </li>
+                    <li> <span class="circle recovering"></span> Recovering </li>
+                    <li> <span class="circle declining"></span> Declining </li>
+                    <li> <span class="circle nationally-increasing"></span> Nationally Increasing </li>
+                    <li> <span class="circle nationally-vulnerable"></span> Nationally Vulnerable </li>
+                    <li> <span class="circle nationally-endangered"></span> Nationally Endangered </li>
+                    <li> <span class="circle nationally-critical"></span> Nationally Critical </li>
+                    <li> <span class="circle data-deficient"></span> Data Deficient </li>
+
+                </ul>
+            </div>
+        </div>
+    </aside>              
+    
     <main id="birds-container"></main>
     
-<script src="/js/inputs.js"></script>
-<script src="/js/main.js"></script>
+    <script src="/js/main.js"></script>
     
 </body>
 

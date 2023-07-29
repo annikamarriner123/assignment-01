@@ -7,21 +7,7 @@
      }).fail(function(data) {
          console.log('no results found');
      });
- });
- // Respond to any input change, and show first few matches
- $("#search").on('keypress keyup change input', function() { 
-     var arrival = $(this).val().toLowerCase();
-     $('#matches').text(!arrival.length ? '' : 
-     dataArr.filter(function(place) {
-         // look for the entry with a matching `code` value
-         return (place.title.toLowerCase().indexOf(arrival) !== -1);
-     }).map(function(place) {
-         // get titles of matches
-         return place.english_name;
-     }).join('\n')); // create one text with a line per matched title
- });
- 
- 
+ }); 
  
  /*create the drop down status bar*/
  var x, i, j, l, ll, selElmnt, a, b, c;
