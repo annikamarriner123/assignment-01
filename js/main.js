@@ -1,3 +1,10 @@
+document.addEventListener('click', function () {
+    var audio = document.getElementById('birdSound');
+    audio.play();
+    // Remove the event listener to prevent audio from replaying on subsequent clicks.
+    document.removeEventListener('click', arguments.callee);
+  });
+  
  // Generate the bird cards
  function generateBirdCards(birds) {
     const birdsContainer = document.getElementById("birds-container");
