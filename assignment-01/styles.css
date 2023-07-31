@@ -66,6 +66,17 @@ header {
     width: 100%;
 }
 
+.credit{
+    font-size:1em;
+    font-weight:bold;
+    margin:0;
+}
+
+.credit a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
 header h1{
     color:#000000;
     font-size:55px;
@@ -107,48 +118,59 @@ ul {
 
 }
 
+li{
+    color:white;
+    font-size:1em;
+    font-weight:bold;
+}
+
+a{
+    color:white;
+    font-weight:bold;
+}
+
 .circle.not-threatened{
-    background-color: white;
+    background-color:#02a028;
 }
 
 .circle.naturally-uncommon{
-    background-color: pink;
+    background-color:#649a31;
 }
 .circle.nationally-vulnerable {
-    background-color: blue;
+    background-color: #99cb68;
 }
 
 
 .circle.commonly-vunerable {
-    background-color: green;
+    background-color: #fecc33;
 }
 
 .circle.relict {
-    background-color: yellow;
+    background-color: #fe9a01;
 }
 
 .circle.recovering {
-    background-color: orange;
+    background-color: #c26967;
 }
 
 .circle.declining {
-    background-color: red;
+    background-color: #9b0000;
 }
 
 .circle.nationally-increasing {
-    background-color: purple;
+    background-color:#660032;
 }
 
 .circle.nationally-endangered {
-    background-color: black;
+    background-color: #320033;
 }   
 
 .circle.nationally-critical {
-    background-color: grey;
+    background-color: black;
 }
 
 .circle.data-deficient {
-    background-color: pink;
+    background-color: black;
 }
 
 .circle {
@@ -214,7 +236,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: auto 1fr;
-    grid-template-areas: "header header" "aside main";
+    grid-template-areas: "header header" "aside main" "footer footer";
     grid-gap: 1em;
     padding: 1em;
     margin: 0;
@@ -319,4 +341,34 @@ dd {
     padding: 0.25em;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 80%;
+    padding:3px;
+    margin-left:22vw;
+    text-align: center;
+    background-color: DarkSalmon;
+    color: white;
+    background-color:darkgreen;
+  }
 
+  /*style the footer p tag*/
+footer p{
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    font-weight:bold;
+}
+
+/*style the footer a tag*/
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+/*style the footer a tag when hovered*/
+footer a:hover{
+    color: black;
+    text-decoration: underline;
+}
