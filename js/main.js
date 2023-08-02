@@ -130,30 +130,32 @@ function filterBirds(searchInput) {
     
     
     
-    // Main function to filter and sort birds based on user input and dropdown selection
     function filterAndSortBirds() {
         const searchInput = document.getElementById("search").value.toLowerCase();
         const sortOption = document.getElementById("sort").value;
-        
+        const selectedStatus = document.getElementById("status-filter").value;
+    
         let filteredBirds = originalBirdData;
         if (searchInput) {
             filteredBirds = filterBirds(searchInput);
         }
-        
+    
+        if (selectedStatus !== "all") {
+            filteredBirds = filteredBirds.filter((bird) => bird.status === selectedStatus);
+        }
+    
         if (sortOption !== "0") {
             filteredBirds = sortBirds(filteredBirds, sortOption);
         }
-        
-        
-        generateBirdCards(filteredBirds);
+    
+        generateBirdCards(filteredBirds, selectedStatus);
     }
-
-
-
 
     // Event listener to trigger the orderBirds function when the sorting option is changed
     document.getElementById("search").addEventListener("input", filterAndSortBirds);
+
     document.getElementById("sort").addEventListener("change", filterAndSortBirds);
+    document.getElementById("status-filter").addEventListener("change", filterAndSortBirds);
 
 
     
