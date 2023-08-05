@@ -54,7 +54,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 body {
     font-family: "Poppins", sans-serif;
-    background: url(forest-background.jpeg) no-repeat;
+    background: url(background1.jpg) no-repeat;
     height:100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -62,9 +62,39 @@ body {
     
 }
 
+/*Style the SoundButton to be on the top right hand corner */
+
+
 header {
     width: 100%;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .control-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+  
+  .control-btn {
+    font-size: 16px;
+    padding: 8px 16px;
+    margin-left: 8px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .control-btn:hover {
+    background-color: darkgreen;
+  }
+
 
 /*style the h1 tag classed filter_title to be at top of the side bar with a margin of 0*/
 h1.filter_title {
@@ -77,6 +107,7 @@ h1.filter_title {
     font-size:1em;
     font-weight:bold;
     margin-top:1.5em;
+    margin-left: 1em;
 }
 
 .credit a:hover{
@@ -85,7 +116,7 @@ h1.filter_title {
 }
 
 header h1{
-    color:#000000;
+    color:white;
     font-size:55px;
     margin:5vh 10vw 5vh 43vw;
     position:absolute;
@@ -143,40 +174,40 @@ a{
 .circle.naturally-uncommon{
     background-color:#649a31;
 }
+
 .circle.nationally-vulnerable {
-    background-color: #99cb68;
-}
-
-
-.circle.commonly-vunerable {
-    background-color: #fecc33;
-}
-
-.circle.relict {
-    background-color: #fe9a01;
-}
-
-.circle.recovering {
-    background-color: #c26967;
-}
-
-.circle.declining {
     background-color: #9b0000;
 }
 
+.circle.relict {
+    background-color: #99cb68;
+}
+
+.circle.recovering {
+    background-color: #fecc33;
+}
+
+.circle.declining {
+    background-color: 	#fe9a01;
+}
+
 .circle.nationally-increasing {
-    background-color:#660032;
+    background-color:	#c26967;
 }
 
 .circle.nationally-endangered {
-    background-color: #320033;
+    background-color: 	#660032;
 }   
 
 .circle.nationally-critical {
-    background-color: black;
+    background-color: #320033;
 }
 
 .circle.data-deficient {
+    background-color: 	black;
+}
+
+.circle.extinct-in-wild {
     background-color: black;
 }
 
@@ -273,7 +304,7 @@ aside{
     width: 100%;
     padding-top:5vh;
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
-    position: relative;
+    position:relative;
     grid-area: aside;
 }
 
