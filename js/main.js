@@ -1,9 +1,17 @@
-document.addEventListener('click', function () {
-    var audio = document.getElementById('birdSound');
-    audio.play();
-    // Remove the event listener to prevent audio from replaying on subsequent clicks.
-    document.removeEventListener('click', arguments.callee);
-  });
+  
+const audio = document.getElementById("audio");
+const playBtn = document.getElementById("playBtn");
+const stopBtn = document.getElementById("stopBtn");
+
+function playAudio() {
+  audio.play();
+}
+
+function stopAudio() {
+  audio.pause();
+  audio.currentTime = 0;
+}
+
   
  // Generate the bird cards
  function generateBirdCards(birds) {
@@ -106,6 +114,24 @@ function filterBirds(searchInput) {
     //myString.normalize("NFC")
     
     
+    fetch("birds.json")
+    .then((response) => response.json())
+    .then((data) => {
+        // 'data' is the fetched bird data in JSON format
+        // Use 'data' for further processing
+
+        // Assuming the 'data' is an array of bird objects, you can sort it like this:
+        const sortedBirds = sortBirds(data, "1");
+        console.log(sortedBirds);
+        // You can replace "1" with the selected sort option from your UI
+
+        // Now you can use the sortedBirds array to update your UI or perform other operations.
+    })
+    .catch((error) => {
+        console.error("Error fetching data:", error);
+    });
+
+
     // Sort function to sort the bird data based on the selected option
     function sortBirds(birds, sortOption) {
         switch (sortOption) {
@@ -122,12 +148,13 @@ function filterBirds(searchInput) {
             birds.sort((a, b) => b.size.length.value - a.size.length.value);
             break;
             // Add more cases for other sorting options if needed
+            // default:
+            // break;
             default:
             break;
         }
         return birds;
     }
-    
     
     
     function filterAndSortBirds() {
