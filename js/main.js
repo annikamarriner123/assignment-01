@@ -65,7 +65,7 @@ let originalBirdData = []; // To store the original bird data fetched from the J
 
 // Fetch function to retrieve bird data from "images.json" and save it for later use
 function fetchBirdData() {
-    fetch("images.json")
+    fetch("./images.json")
     .then((response) => response.json())
     .then((birdData) => {
         originalBirdData = birdData.birds;
@@ -114,7 +114,7 @@ function filterBirds(searchInput) {
     //myString.normalize("NFC")
     
     
-    fetch("birds.json")
+    fetch("./images.json")
     .then((response) => response.json())
     .then((data) => {
         // 'data' is the fetched bird data in JSON format
