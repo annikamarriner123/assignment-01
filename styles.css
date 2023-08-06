@@ -54,7 +54,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 body {
     font-family: "Poppins", sans-serif;
-    background: url(background1.jpg) no-repeat;
+    background: url(data/background1.jpg) no-repeat;
     height:100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -104,10 +104,10 @@ h1.filter_title {
 }
 
 .credit{
-    font-size:1em;
+    font-size:0.9em;
     font-weight:bold;
-    margin-top:1.5em;
     margin-left: 1em;
+    margin-bottom:1em;
 }
 
 .credit a:hover{
